@@ -31,11 +31,11 @@ public class Book {
 
     @Override
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
+        if (other == null || this.getClass() != other.getClass()) {
             return false;
         }
         Book c2 = (Book) other;
-        return (this.publishingYear == c2.publishingYear) && this.name.equals(c2.name) && this.author.equals(c2.author);
+        return this.publishingYear == c2.publishingYear && this.name.equals(c2.name) && this.author.equals(c2.author);
     }
 
     @Override
